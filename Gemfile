@@ -38,3 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'will_paginate'
+gem 'bcrypt-ruby', '~> 3.0'

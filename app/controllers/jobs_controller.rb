@@ -7,10 +7,14 @@ class JobsController < ApplicationController
     @jobs = Job.all
   end
 
-  def premium
-    @jobs = Job.where(premium: true).all
-  end
+  # def premium
+  #   @jobs = Job.where(premium: true).all
+  # end
 
+ 	def premium
+    	@jobs = Job.where(premium: true).all.
+      paginate(page: params[:page], per_page: 5)
+  	end
   # GET /jobs/1
   # GET /jobs/1.json
   def show
